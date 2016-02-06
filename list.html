@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<title>陈叔叔博客-最前沿的技术博客</title>
+		<meta charset="UTF-8">
+		<meta name="title" content="陈叔叔博客_陈叔叔_博客">
+		<meta name="keywords" content="陈叔叔博客,陈叔叔,博客,外卖侠,邮轮时代,nodejs,技术文章,个人日记,在线资源,网赚,HTML5,CSS3,jQuery,AmazeUI,Lotus,Domino">
+		<meta name="description" content="随着HTML5+CSS3技术的日渐成熟，前端开发工程师成为了现在最热门的职业,在这个全民创业的时代里，缺少的不是好的想法，而是执行力,程序开发一定要走心，这样开发出来的东西才是有灵魂的，没有十年以上的项目经验，不能说自己精通这门技术，最多也就是熟练">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/amazeui.min.js"></script>
+		<script type="text/javascript" src="js/basic.js"></script>
+		<script type="text/javascript" src="js/list.js"></script>
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+
+	<body class="am-with-fixed-navbar">
+		<!-- Header -->
+		<header data-am-widget="header" class="am-header am-header-default am-no-layout am-header-fixed">
+			<div class="am-header-left am-header-nav none btn_return">
+				<a href="javascript:history.go(-1);" class="am-btn am-btn-default">
+					<span class="am-header-nav-title">
+                	返回
+              </span>
+					<i class="am-header-icon am-icon-home"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+    		<a href="#title-link">陈叔叔博客</a>
+  		</h1>
+		</header>
+		<!-- 左侧菜单 -->
+		<nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
+			<a href="javascript: void(0)" class="am-menu-toggle">
+				<i class="am-menu-toggle-icon am-icon-bars"></i>
+			</a>
+			<div class="am-offcanvas">
+				<div class="am-offcanvas-bar">
+					<ul class="am-menu-nav sm-block-grid-1">
+						<li class="am-parent">
+							<a href="##">开发技术</a>
+							<ul id="ajax_menu" class="am-menu-sub  sm-block-grid-2 am-collapse am-in">
+								<li class="loaddata">数据加载中... <i class="am-icon-spinner am-icon-pulse"></i></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<nav data-am-widget="menu" class="am-menu  am-menu-dropdown1" data-am-menu-collapse>
+			<a href="javascript: void(0)" onclick="window.location='#top'" class="am-menu-toggle menu-right-2">
+				<i class="am-menu-toggle-icon am-icon-search"></i>
+			</a>
+
+			<ul class="am-menu-nav am-avg-sm-1 am-collapse">
+				<li>
+					<div class="am-form-icon">
+						<i class="am-icon-search"></i>
+						<input type="text" id="key" class="am-form-field" oninput="searchKey();" placeholder="请输入搜索的内容">
+					</div>
+					<div id="result"></div>
+				</li>
+			</ul>
+
+		</nav>
+		<!--内容开始-->
+		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+			<!--列表标题-->
+			<div class="am-list-news-bd">
+				<ul class="am-list" id="article_list"></ul>
+			</div>
+		</div>
+		<!--内容结束-->
+		<!--数据加载层-->
+		<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd">正在载入...</div>
+				<div class="am-modal-bd">
+					<span class="am-icon-spinner am-icon-spin"></span>
+				</div>
+			</div>
+		</div>
+		<!--回到顶部-->
+		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
+			<a href="#top" title="回到顶部">
+				<span class="am-gotop-title">回到顶部</span>
+				<i class="am-gotop-icon am-icon-chevron-up"></i>
+			</a>
+		</div>
+		<!-- Footer -->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul class="am-navbar-nav am-cf am-avg-sm-4">
+				<li>
+					<a href="home.html">
+						<span class="am-icon-home"></span>
+						<span class="am-navbar-label">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=1">
+						<span class="am-icon-book"></span>
+						<span class="am-navbar-label">文章</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=2">
+						<span class="am-icon-calendar-check-o"></span>
+						<span class="am-navbar-label">日记</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=3">
+						<span class="am-icon-github"></span>
+						<span class="am-navbar-label">资源</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=101">
+						<span class="am-icon-wechat"></span>
+						<span class="am-navbar-label">公众号</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<span class="am-icon-user"></span>
+						<span class="am-navbar-label">关于我</span>
+					</a>
+				</li>
+				<li>
+					<a href="adv.html">
+						<span class="am-icon-rss"></span>
+						<span class="am-navbar-label">技术支持</span>
+					</a>
+				</li>
+				<li data-am-navbar-share>
+					<a href="###">
+						<span class="am-icon-share-square-o"></span>
+						<span class="am-navbar-label">分享</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

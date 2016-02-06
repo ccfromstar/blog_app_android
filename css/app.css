@@ -1,0 +1,44 @@
+.blog-main h3{
+	margin-top:1.6rem !important;
+	text-indent: -1rem;
+	font-size: 2.4rem !important;
+	font-weight: bold;
+}
+.am-list-item-hd{
+	text-indent: -0.6rem;
+}
+.about{
+	margin-top: 1rem;
+}
+.adv{
+	width:100%;
+}
+.am-list-main .am-list-item-hd{
+	text-indent: 0 !important;
+}
+.home_logo{
+	margin-top: 0.6rem;
+}
+.list_time{
+	margin-top:-1rem !important;
+	margin-bottom:0.4rem !important;
+}
+.am-gallery-item img{
+	height: 8rem !important;
+}
+.am-menu-toggle{
+	position:fixed !important;
+	top:0.2rem !important;
+}
+.none{
+	display: none;
+}
+.am-tabs-bd{
+	overflow:hidden;	
+}
+.menu-right-2{
+	right: 35px !important;
+}
+.loaddata{
+	color:#fff;
+}

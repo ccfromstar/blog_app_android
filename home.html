@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<title>陈叔叔博客-最前沿的技术博客</title>
+		<meta charset="UTF-8">
+		<meta name="title" content="陈叔叔博客_陈叔叔_博客">
+		<meta name="keywords" content="陈叔叔博客,陈叔叔,博客,外卖侠,邮轮时代,nodejs,技术文章,个人日记,在线资源,网赚,HTML5,CSS3,jQuery,AmazeUI,Lotus,Domino">
+		<meta name="description" content="随着HTML5+CSS3技术的日渐成熟，前端开发工程师成为了现在最热门的职业,在这个全民创业的时代里，缺少的不是好的想法，而是执行力,程序开发一定要走心，这样开发出来的东西才是有灵魂的，没有十年以上的项目经验，不能说自己精通这门技术，最多也就是熟练">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/amazeui.min.js"></script>
+		<script type="text/javascript" src="js/basic.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+
+	<body class="am-with-fixed-navbar">
+		<!-- Header -->
+		<header data-am-widget="header" class="am-header am-header-default am-no-layout am-header-fixed">
+			<div class="am-header-left am-header-nav none btn_return">
+				<a href="javascript:history.go(-1);" class="am-btn am-btn-default">
+					<span class="am-header-nav-title">
+                	返回
+              </span>
+					<i class="am-header-icon am-icon-home"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+    		<a href="#title-link">陈叔叔博客</a>
+  		</h1>
+		</header>
+		<!-- 左侧菜单 -->
+		<nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
+			<a href="javascript: void(0)" class="am-menu-toggle">
+				<i class="am-menu-toggle-icon am-icon-bars"></i>
+			</a>
+			<div class="am-offcanvas">
+				<div class="am-offcanvas-bar">
+					<ul class="am-menu-nav sm-block-grid-1">
+						<li class="am-parent">
+							<a href="##">开发技术</a>
+							<ul id="ajax_menu" class="am-menu-sub  sm-block-grid-2 am-collapse am-in">
+								<li class="loaddata">数据加载中... <i class="am-icon-spinner am-icon-pulse"></i></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<nav data-am-widget="menu" class="am-menu  am-menu-dropdown1" data-am-menu-collapse>
+			<a href="javascript: void(0)" onclick="window.location='#top'" class="am-menu-toggle menu-right-2">
+				<i class="am-menu-toggle-icon am-icon-search"></i>
+			</a>
+
+			<ul class="am-menu-nav am-avg-sm-1 am-collapse">
+				<li>
+					<div class="am-form-icon">
+						<i class="am-icon-search"></i>
+						<input type="text" id="key" class="am-form-field" oninput="searchKey();" placeholder="请输入搜索的内容">
+					</div>
+					<div id="result"></div>
+				</li>
+			</ul>
+
+		</nav>
+		<!-- 滚动图片 -->
+		<div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}'>
+			<ul class="am-slides">
+				<li>
+					<img src="img/header.png">
+				</li>
+				<li>
+					<img src="img/header2.png">
+				</li>
+				<li>
+					<img src="img/header3.png">
+				</li>
+				<li>
+					<img src="img/header4.png">
+				</li>
+				<li>
+					<img src="img/header5.png">
+				</li>
+			</ul>
+		</div>
+		<!--移动网站案例-->
+		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+			<!--列表标题-->
+			<div class="am-list-news-hd am-cf">
+				<!--带更多链接-->
+				<a href="###">
+					<h2>移动开发案例</h2>
+					<!--<span class="am-list-news-more am-fr">更多 &raquo;</span>-->
+				</a>
+			</div>
+			<div class="am-list-news-bd">
+				<ul class="am-list">
+					<!--缩略图在标题左边-->
+					<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+						<div class="am-u-sm-4 am-list-thumb">
+							<a href="post.html?id=156">
+								<img class="home_logo" src="img/logo1.png" />
+							</a>
+						</div>
+						<div class="am-u-sm-8 am-list-main">
+							<h3 class="am-list-item-hd">
+            <a href="post.html?id=156">邮轮时代</a>
+          </h3>
+							<div class="am-list-item-text">在线邮轮销售工具，可以对邮轮产品进行查询和预定，是您邮轮出行的第一选择</div>
+						</div>
+					</li>
+					<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+						<div class="am-u-sm-4 am-list-thumb">
+							<a href="post.html?id=157">
+								<img class="home_logo" src="img/logo6.png" />
+							</a>
+						</div>
+						<div class="am-u-sm-8 am-list-main">
+							<h3 class="am-list-item-hd">
+            <a href="post.html?id=157">外卖侠</a>
+          </h3>
+							<div class="am-list-item-text">在线外卖订餐系统，可以选择自己喜欢的美食提前预定，方便都市白领解决午餐的问题</div>
+						</div>
+					</li>
+					<li class="am-g am-list-item-desced">
+						<div class="am-list-main">
+							<h3 class="am-list-item-hd">
+            <a href="post.html?id=158">在这个全民创业的时代里，缺少的不是好的想法，而是执行力</a>
+          </h3>
+							<div class="am-list-item-text">程序开发一定要走心，这样开发出来的东西才是有灵魂的，没有十年以上的项目经验，不能说自己精通这门技术，最多也就是熟练</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 网站开发案例 -->
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-4 am-gallery-default">
+			<li>
+				<div class="am-gallery-item">
+					<a href="post.html?id=159" class="">
+						<img src="img/adv5.jpg" />
+						<h3 class="am-gallery-title">上海城投</h3>
+						<div class="am-gallery-desc">BPM办公流程自动化系统</div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="am-gallery-item">
+					<a href="post.html?id=162" class="">
+						<img src="img/adv1.jpg" />
+						<h3 class="am-gallery-title">邮轮时代</h3>
+						<div class="am-gallery-desc">在线邮轮订票网站</div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="am-gallery-item">
+					<a href="post.html?id=160" class="">
+						<img src="img/adv4.jpg" />
+						<h3 class="am-gallery-title">外卖侠</h3>
+						<div class="am-gallery-desc">在线外卖点餐平台</div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="am-gallery-item">
+					<a href="post.html?id=161" class="">
+						<img src="img/adv2.jpg" />
+						<h3 class="am-gallery-title">荟邮轮</h3>
+						<div class="am-gallery-desc">B2B同业分销平台</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+
+		<!-- 文章列表 -->
+		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+			<!--列表标题-->
+			<div class="am-list-news-hd am-cf">
+				<!--带更多链接-->
+				<a href="list.html?c=0">
+					<h2>最新更新</h2>
+					<span class="am-list-news-more am-fr">更多 &raquo;</span>
+				</a>
+			</div>
+			<div class="am-list-news-bd">
+				<ul id="ajax_list" class="am-list">
+					<li>数据加载中... <i class="am-icon-spinner am-icon-pulse"></i></li>
+				</ul>
+			</div>
+		</div>
+		<!--板块入口-->
+		<div data-am-widget="tabs" class="am-tabs am-tabs-default">
+			<ul class="am-tabs-nav am-cf">
+				<li class="am-active"><a href="[data-tab-panel-0]">文章</a></li>
+				<li class=""><a href="[data-tab-panel-1]">日记</a></li>
+				<li class=""><a href="[data-tab-panel-2]">资源</a></li>
+				<li class=""><a href="[data-tab-panel-3]">公众号</a></li>
+			</ul>
+			<div class="am-tabs-bd">
+				<div data-tab-panel-0 class="am-tab-panel am-active" onclick="window.location='/list?c=1';">
+					【文章】随着HTML5+CSS3技术的日渐成熟，前端开发工程师成为了现在最热门的职业，每天更新博主自己在项目中的经验和最新的技术分享，帮助您更快的成长。
+				</div>
+				<div data-tab-panel-1 class="am-tab-panel " onclick="window.location='/list?c=2';">
+					【日记】记录博客在生活中遇到的奇闻异事和比较有价值的网站的分享，以及博客平台的一个成长过程。
+				</div>
+				<div data-tab-panel-2 class="am-tab-panel " onclick="window.location='/list?c=3';">
+					【资源】在线视频教程和学习资源下载，一些比较实用的开发工具和第三方平台，帮助你更快的成长
+				</div>
+				<div data-tab-panel-3 class="am-tab-panel " onclick="window.location='/list?c=101';">
+					【公众号】为您分享IT行业比较有价值的微信公众号，帮助您了解程序员的乐趣和最新的行业动态。
+				</div>
+			</div>
+		</div>
+		<!--回到顶部-->
+		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
+			<a href="#top" title="回到顶部">
+				<span class="am-gotop-title">回到顶部</span>
+				<i class="am-gotop-icon am-icon-chevron-up"></i>
+			</a>
+		</div>
+		<!-- Footer -->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul class="am-navbar-nav am-cf am-avg-sm-4">
+				<li>
+					<a href="home.html">
+						<span class="am-icon-home"></span>
+						<span class="am-navbar-label">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=1">
+						<span class="am-icon-book"></span>
+						<span class="am-navbar-label">文章</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=2">
+						<span class="am-icon-calendar-check-o"></span>
+						<span class="am-navbar-label">日记</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=3">
+						<span class="am-icon-github"></span>
+						<span class="am-navbar-label">资源</span>
+					</a>
+				</li>
+				<li>
+					<a href="list.html?c=101">
+						<span class="am-icon-wechat"></span>
+						<span class="am-navbar-label">公众号</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<span class="am-icon-user"></span>
+						<span class="am-navbar-label">关于我</span>
+					</a>
+				</li>
+				<li>
+					<a href="adv.html">
+						<span class="am-icon-rss"></span>
+						<span class="am-navbar-label">技术支持</span>
+					</a>
+				</li>
+				<li data-am-navbar-share>
+					<a href="###">
+						<span class="am-icon-share-square-o"></span>
+						<span class="am-navbar-label">分享</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
